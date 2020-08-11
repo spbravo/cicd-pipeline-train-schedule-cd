@@ -43,7 +43,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                input 'Does the staging environment look OK, hopefully yes?'
+                input 'Does the staging environment look OK?'
                 milestone(1)
                 withCredentials([usernamePassword(credentialsId: 'Jenkins_node', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                     sshPublisher(
